@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Icon2.png" type="image/x-icon">
+    <title>PH Tube</title>
+
+    <!-- daisyUI cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .active{
+            background-color: #FF1F3D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <!-- navbar section  -->
+        <nav class="w-11/12 mx-auto pt-8 pb-4 border-b-2 flex justify-between border-[#17171720]">
+            <div><img class="w-[120px]" src="img/Logo.png" alt=""></div>
+
+            <input id="inputBtn" type="text" placeholder="Type here" class="input" />
+
+            <div>
+                <button class="btn bg-[#FF1F3D] text-white">Blog</button>
+            </div>
+        </nav>
+    </head>
+
+    <!-- button section  -->
+    <nav id="categoryNav" class="my-6 flex gap-6 justify-center">
+        <button id="btnAll" onclick="loadVideo()" class="btn btn-sm">All</button>
+    </nav>
+
+    <!-- loader section  -->
+    <section id="loader" class="text-center pt-12 hidden">
+        <span class="loading loading-dots loading-xl"></span>
+    </section>
+
+    <!-- card section  -->
+    <section class="w-11/12 mx-auto grid md:grid-cols-4 grid-cols-2 gap-6" id="card-container">
+
+        <div class="py-30 col-span-full flex flex-col justify-center items-center text-center">
+            <img class="w-[120px]" src="img/Icon.png" alt="" />
+            <h2 class="text-2xl font-bold">
+              Oops!! Sorry, There is no content here
+            </h2>
+        </div>
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="btn_details" class="modal">
+      <div class="modal-box">
+        <div id="card"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    
+
+
+    <script src="script/nav.js"></script>
+</body>
+</html>
